@@ -1,0 +1,59 @@
+#SKHD STUFF
+
+shift + alt - i : \
+    yabai -m window --resize top:0:-20 ; \
+    yabai -m window --resize bottom:0:-20
+
+shift + alt - j : \
+    yabai -m window --resize left:-20:0 ; \
+    yabai -m window --resize right:-20:0
+
+shift + alt - k: \
+    yabai -m window --resize bottom:0:20 ; \
+    yabai -m window --resize top:0:20
+
+shift + alt - l: \
+    yabai -m window --resize right:20:0 ; \
+    yabai -m window --resize left:20:0
+
+
+
+# change window focus within space
+cmd - k : yabai -m window --focus next 
+cmd - j : yabai -m window --focus prev
+#cmd - [ : yabai -m window --focus north
+#cmd - ; : yabai -m window --focus west
+#cmd - ' : yabai -m window --focus east
+## rotate tree 90
+alt - m : yabai -m space --rotate 270
+
+## flip the tree vertically
+#hyper - y : yabai -m space --mirror y-axis
+# mirror tree y-axis
+#alt - y : yabai -m space --mirror y-axis
+## mirror tree x-axis
+#hyper - x : yabai -m space --mirror x-axis
+
+#Move active window to next space on current display
+#lalt + ctrl - left : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '3' ]]; then yabai -m window --space 2; elif [[ '{}' = '2' ]]; then yabai -m window --space 1; fi"
+#lalt + ctrl - right : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '2' ]]; then yabai -m window --space 3; elif [[ '{}' = '1' ]]; then yabai -m window --space 2; fi"
+#shift + lalt + lcmd + ctrl + ralt - 3 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '5' ]]; then yabai -m window --space 6; elif [[ '{}' = '6' ]]; then yabai -m window --space 5; fi"
+
+alt + cmd - 1 : yabai -m window --space 1;
+alt + cmd - 2 : yabai -m window --space 2;
+alt + cmd - 3 : yabai -m window --space 3;
+alt + cmd - 4 : yabai -m window --space 4;
+alt + cmd - 5 : yabai -m window --space 5;
+# show next space per display
+#hyper - 1 : /Users/jesseskelton/CustomScripts/SwitchSpaces/switchAndFocus.sh 1
+#hyper - 2 : /Users/jesseskelton/CustomScripts/SwitchSpaces/switchAndFocus.sh 2
+#hyper - 3 : /Users/jesseskelton/CustomScripts/SwitchSpaces/switchAndFocus.sh 3
+#ctrl + alt + cmd + lshift - 1 : /Users/jun/CustomScripts/SwitchSpaces/switchAndFocusSIP.sh 1
+#ctrl + alt + cmd + lshift - 2 : /Users/jun/CustomScripts/SwitchSpaces/switchAndFocusSIP.sh 2
+#ctrl + alt + cmd + lshift - 3 : /Users/jun/CustomScripts/SwitchSpaces/switchAndFocusSIP.sh 3
+
+## toggle window fullscreen zoom
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+
+hyper - 1 : yabai -m space --focus 1
