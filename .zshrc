@@ -28,7 +28,7 @@ vcs_info
 setopt prompt_subst
 #PROMPT='%F{011}%f %U%F{yellow}%~%f%u %F{blue}${vcs_info_msg_0_} %f$ '
 #PROMPT='%F{011}%f%F{blue}${vcs_info_msg_0_} %f> '
-PROMPT='%F{011} %f$ '
+PROMPT='%F{011} %f%F{#FFFF00}$ '
 #PROMPT="%F{011}> %f %U%F{yellow}%~%f%u %F{blue}${vcs_info_msg_0_}$%f "
 
 #PROMPT="%F{011}> %f%U%F{yellow}%f%u%F{blue}$%f "
